@@ -1,10 +1,7 @@
 const React = require('react');
 const ReactDOM = require('react-dom');
-const Todo = require('./containers/TodoContainer');
-const TodoInput = require('./components/TodoInput');
+const Main = require('./containers/MainContainer');
 
-function Hello() {
-    return <div><TodoInput /><ul><Todo name="Do stuff" /></ul></div>;
-}
+let todos = [{ name: 'Do Stuff', id: 1 }];
 
-ReactDOM.render(<Hello />, document.getElementById('app'));
+ReactDOM.render(<Main todos={todos} />, document.getElementById('app'));

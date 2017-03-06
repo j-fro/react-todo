@@ -1,3 +1,12 @@
 const React = require('react');
+const PropTypes = React.PropTypes;
 
-module.exports = props => <li><p>{props.name}</p></li>;
+function Todo(props) {
+    return <li><p>{props.name}</p></li>;
+}
+
+Todo.propTypes = {
+    name: PropTypes.string.isRequired
+};
+
+module.exports = Todo;
